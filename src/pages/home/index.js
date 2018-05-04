@@ -1,9 +1,9 @@
 import React from 'react'
-
-export default class Home extends React.Component {
+import {withRouter} from 'react-router-dom'
+export default  class Home extends React.Component {
     render() {
         return (
-            <div className='home-wrap card-wrap '>
+            <div className="admin-welcome">
                 <h2>欢迎登录珠峰博客</h2>
             </div>
         )

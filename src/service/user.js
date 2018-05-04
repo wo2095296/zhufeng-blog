@@ -4,7 +4,10 @@ export function signup(data) {
 }
 
 export function signin(data) {
-    return post('/user/signin', data);
+    return post('/user/signin',data).then((res) => {
+        sessionStorage.setItem('BLOG_TOKEN',res.data);
+        return res;
+    });
 }
 
 export function signout() {
